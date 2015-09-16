@@ -14,6 +14,8 @@
 		962B3D041BA941F800969023 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 962B3D031BA941F800969023 /* Images.xcassets */; };
 		962B3D071BA941F800969023 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 962B3D051BA941F800969023 /* LaunchScreen.xib */; };
 		962B3D131BA941F800969023 /* ReachabilityPopupTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 962B3D121BA941F800969023 /* ReachabilityPopupTests.m */; };
+		962B3D1E1BA9421D00969023 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 962B3D1D1BA9421D00969023 /* Reachability.m */; };
+		962B3D201BA9422A00969023 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 962B3D1F1BA9422A00969023 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		962B3D0C1BA941F800969023 /* ReachabilityPopupTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReachabilityPopupTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		962B3D111BA941F800969023 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		962B3D121BA941F800969023 /* ReachabilityPopupTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReachabilityPopupTests.m; sourceTree = "<group>"; };
+		962B3D1C1BA9421D00969023 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		962B3D1D1BA9421D00969023 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		962B3D1F1BA9422A00969023 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				962B3D201BA9422A00969023 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +69,7 @@
 		962B3CEA1BA941F800969023 = {
 			isa = PBXGroup;
 			children = (
+				962B3D1F1BA9422A00969023 /* SystemConfiguration.framework */,
 				962B3CF51BA941F800969023 /* ReachabilityPopup */,
 				962B3D0F1BA941F800969023 /* ReachabilityPopupTests */,
 				962B3CF41BA941F800969023 /* Products */,
@@ -85,6 +92,8 @@
 				962B3CFB1BA941F800969023 /* AppDelegate.m */,
 				962B3CFD1BA941F800969023 /* ViewController.h */,
 				962B3CFE1BA941F800969023 /* ViewController.m */,
+				962B3D1C1BA9421D00969023 /* Reachability.h */,
+				962B3D1D1BA9421D00969023 /* Reachability.m */,
 				962B3D001BA941F800969023 /* Main.storyboard */,
 				962B3D031BA941F800969023 /* Images.xcassets */,
 				962B3D051BA941F800969023 /* LaunchScreen.xib */,
@@ -221,6 +230,7 @@
 			files = (
 				962B3CFF1BA941F800969023 /* ViewController.m in Sources */,
 				962B3CFC1BA941F800969023 /* AppDelegate.m in Sources */,
+				962B3D1E1BA9421D00969023 /* Reachability.m in Sources */,
 				962B3CF91BA941F800969023 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +426,7 @@
 				962B3D181BA941F800969023 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		962B3D191BA941F800969023 /* Build configuration list for PBXNativeTarget "ReachabilityPopupTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +435,7 @@
 				962B3D1B1BA941F800969023 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
