@@ -53,13 +53,13 @@ UIView *noNetView;
 - (void) reachabilityChanged:(NSNotification *)note
 {
     NetworkStatus status = reachable.currentReachabilityStatus;
-    [self displayOrHideStatus:true];
     BOOL connectionRequired = [reachable connectionRequired];
     switch (status)
     {
         case NotReachable:        {
             NSLog(@"N/A");
             connectionRequired = NO;
+            [self displayOrHideStatus:true];
             break;
         }
         case ReachableViaWWAN:        {
@@ -84,20 +84,20 @@ UIView *noNetView;
             UILabel *noStausLbl = [[UILabel alloc]  initWithFrame:CGRectMake(10, 0, noNetView.frame.size.width, noNetView.frame.size.height)];
             [noStausLbl setTextColor:[UIColor whiteColor]];
             [noStausLbl setText:@"No Connection."];
-            [noStausLbl setFont:[UIFont fontWithName:@"Avenir Light" size:14]];
+            [noStausLbl setFont:[UIFont fontWithName:@"Roboto Bold" size:14]];
             [noStausLbl setTag:1];
             [noNetView addSubview:noStausLbl];
-            [noNetView setBackgroundColor:[UIColor colorWithWhite:0.492 alpha:1.000]];
+            [noNetView setBackgroundColor:[UIColor colorWithWhite:0.173 alpha:1.000]];
         }
         [self.window addSubview:noNetView];
-        [UIView animateWithDuration:2 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
             [noNetView setFrame:CGRectMake(0, self.window.frame.size.height-40, self.window.frame.size.width, 40)];
         } completion:^(BOOL finished) {
             [self performSelector:@selector(displayOrHideStatus:) withObject:false afterDelay:2];
         }];
         
     }else{
-        [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
             [noNetView setFrame:CGRectMake(0, self.window.frame.size.height, self.window.frame.size.width, 40)];
         } completion:^(BOOL finished) {
             [noNetView removeFromSuperview];
